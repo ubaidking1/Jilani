@@ -1,138 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="styles.css">
-   <link rel="stylesheet" href="send-email.php"> 
-   <link rel="stylesheet" href="process-form.php">
-   <title>Jilani Shipping international </title>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Jilani Shipping international</h1>
+            <h1>Texttile Colour</h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                <link rel="stylesheet" href="style.css">
                 </ul>
+
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section id="home">
         <div class="container">
-            <h2>Welcome to Our Export & Import Services</h2>
-            <p>Bridging global markets for your business needs.</p>
+            <h2>Welcome to Texttile Colour</h2>
+            <p>Your premier destination for high-quality towels and textile products.</p>
+            <div class="image-row">
+                <img src="c:\Users\user\Downloads\61XBxh88rL._AC_UF8941000_QL80_-ezgif.com-jpg-to-png-converter.png" alt="Towel Image">
+                <img src="c:\Users\user\Downloads\Why-Use-Microfiber-Cleaning-Rags.JPG-ezgif.com-webp-to-jpg-converter (1).jpg" alt="Towel Image">
+                <img src="c:\Users\user\Downloads\Afroze-2020-Signature-Products-6-pbw44vkl8om6u1sq6orrifvygldygdxekd0dh5iyrs-ezgif.com-resize.png" alt="Towel Image">
+                <img src="c:\Users\user\Downloads\ezgif.com-resize.jpg" alt="Towel Image">
+            </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <h2>About Us</h2>
-            <p>We specialize in facilitating international trade for your products. With a focus on reliability and efficiency, we help businesses expand their market reach globally.</p>
+            <p>We are Texttile Colour working since 2000 as a Manufacturer, Supplier, Stockist, and Exporter of various textile items like bedsheets, towels, pillow covers, and wiping rags.</p>
         </div>
     </section>
 
-  
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Custom Towel Designs</li>
+                <li>Textile Color Consultation</li>
+                <li>Bulk Orders and Wholesale</li>
+                <li>High-Quality Material Sourcing</li>
+            </ul>
+        </div>
+    </section>
 
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to get in touch with us, please use the following contact details:</p>
+            <p>Email: <a href="mailto:ubaidking9999@gmail.com">ubaidking9999@gmail.com</a></p>
+            <p>Phone: +923180155643</p>
+            <p>Address: Anum Trader Ghani Chorangi Industrial Area</p>
+            
+            <!-- Contact Form -->
+            <form action="https://formspree.io/f/xwpebeor" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="styles.css">
-      <link rel="stylesheet" href="process-form.php">
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .form-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            box-sizing: border-box;
-        }
-        button {
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        .feedback {
-            margin-top: 15px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <h1>Contact Us</h1>
-        <form id="contact-form" method="POST" action="https://formspree.io/f/xwpebeor">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <br>
-            <button type="submit">Send</button>
-            <div id="feedback" class="feedback"></div>
-        </form>
-    </div>
-    
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            var form = event.target;
-            var feedback = document.getElementById('feedback');
-
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    feedback.textContent = 'Thank you for your message!';
-                    feedback.style.color = 'green';
-                    form.reset(); // Reset the form after successful submission
-                } else {
-                    feedback.textContent = 'There was a problem submitting your message.';
-                    feedback.style.color = 'red';
-                }
-            })
-            .catch(() => {
-                feedback.textContent = 'There was a problem submitting your message.';
-                feedback.style.color = 'red';
-            });
-        });
-    </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Texttile Colour. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
